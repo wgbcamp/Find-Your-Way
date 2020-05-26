@@ -33,7 +33,7 @@ npm run start
 
 Migrate to localhost:3001 in browser.
 
-### Technologies
+## Technologies
 
 * Javascript
 * HTML
