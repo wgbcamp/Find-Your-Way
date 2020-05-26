@@ -1,7 +1,6 @@
 var longitudeValue;
 var latitudeValue;
 var placeSentToGeocode;
-var apikey = "YOUR_API_KEY";
 var place_idVariable;
 var photo;
 var savedAppendRestaurants;
@@ -9,6 +8,14 @@ var dayNumber = new Date();
 var dayOutput = dayNumber.getDay();
 var place_idVariableForLodging;
 var savedAppendLodging;
+
+$.ajax({
+    type: 'GET',
+    url: '/getKey'
+})
+    .then(function(response){
+        apikey = response;
+    });
 
 //**autocomplete function starts after user types text into input field**
 google.maps.event.addDomListener(window, 'load', initialize);
